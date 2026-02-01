@@ -5,7 +5,6 @@ import core.ActionHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class LandingPage extends BasePage {
     private ActionHelper actionHelper;
@@ -39,7 +38,7 @@ public class LandingPage extends BasePage {
         actionHelper.click(getEstimateButton);
     }
 
-    public boolean getTitleForTheFirstQuestion(){
+    public boolean getTitleForTheFirstQuestion() {
         waitHelper.waitUntilVisibility(textForKitchenElements);
         return textForKitchenElements.isDisplayed();
     }

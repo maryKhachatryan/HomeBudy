@@ -1,11 +1,8 @@
 package autoTests.landingPage;
 
 import autoTests.BaseTest;
-import core.WaitHelper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import static business.data.CommonData.*;
 
 
 public class LandingPageTest extends BaseTest {

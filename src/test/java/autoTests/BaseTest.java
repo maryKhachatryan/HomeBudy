@@ -24,8 +24,6 @@ public class BaseTest {
 
     protected LandingPage landingPage;
 
-
-
     protected WaitHelper waitHelper;
 
     public BaseTest() {
@@ -67,43 +65,21 @@ public class BaseTest {
 
     @BeforeMethod
     public void open() {
-        // Set up the ChromeOptions
+
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("no-first-run");
-//        options.addArguments("disable-default-apps");
-//        options.addArguments("no-default-browser-check");
-//        options.addArguments("--disable-search-engine-choice-screen");
-//        options.addArguments("--user-data-dir=/path/to/your/custom/profile");
-
-        // Initialize WebDriver with ChromeOptions
-        //chromeDriver = new ChromeDriver();
         chromeDriver.manage().window().maximize();
-
-//        try {
-//            chromeDriver.switchTo().alert().dismiss();
-//        } catch (NoAlertPresentException e) {
-//            // No alert found, continue with the test
-//        }
-//        String originalWindow = chromeDriver.getWindowHandle();
-//        for (String windowHandle : chromeDriver.getWindowHandles()) {
-//            if (!windowHandle.equals(originalWindow)) {
-//                chromeDriver.switchTo().window(windowHandle);
-//                chromeDriver.close();
-//                chromeDriver.switchTo().window(originalWindow);
-//            }
-        //  }
         chromeDriver.get(BASE_URL);
 
     }
 
     @AfterMethod
-    public void cleaningCookies(){
+    public void cleaningCookies() {
         getChromeDriver().manage().deleteAllCookies();
         getChromeDriver().getLocalStorage().clear();
     }
 
     @AfterSuite
-    public void close(){
+    public void close() {
         chromeDriver.close();
     }
 }
