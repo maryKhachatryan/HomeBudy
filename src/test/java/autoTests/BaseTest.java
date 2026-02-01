@@ -1,85 +1,32 @@
 package autoTests;
 
-import business.BasePage;
-import business.pages.LandingPage;
-import core.WaitHelper;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
+import core.WebDriverHelper;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import static business.data.CommonData.BASE_URL;
 
 public class BaseTest {
-
-    private static ChromeDriver chromeDriver;
-
-    private static JavascriptExecutor executor;
-
-    protected BasePage basePage;
-
-    protected LandingPage landingPage;
-
-    protected WaitHelper waitHelper;
-
-    public BaseTest() {
-        WebDriverManager.chromedriver().setup();
-        chromeDriver = new ChromeDriver();
-        basePage = new BasePage(chromeDriver);
-        landingPage = new LandingPage(chromeDriver);
-        waitHelper = new WaitHelper(chromeDriver);
-
-        executor = (JavascriptExecutor) chromeDriver;
-    }
-
-    public static ChromeDriver getChromeDriver() {
-        return chromeDriver;
-    }
-
-    public static void scrollTo() {
-        executor.executeScript("window.scrollBy(0,350)", "");
-    }
-
-    public void switchToNewWindow() {
-        String originalWindowHandle = chromeDriver.getWindowHandle();
-
-        for (String windowHandle : chromeDriver.getWindowHandles()) {
-            if (!windowHandle.equals(originalWindowHandle)) {
-                chromeDriver.switchTo().window(windowHandle);
-                break;
-            }
-        }
-    }
-
-    public void switchToOriginalWindow() {
-        for (String windowHandle : chromeDriver.getWindowHandles()) {
-            chromeDriver.switchTo().window(windowHandle);
-            break;
-        }
-    }
-
+    private static WebDriver driver;
 
     @BeforeMethod
-    public void open() {
+    @Parameters({"browser"})
+    public void setup(@Optional("chrome") final String browser) {
+        driver = WebDriverHelper.getInstance(browser).getDriver();
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+        driver.get(BASE_URL);
+    }
 
-        ChromeOptions options = new ChromeOptions();
-        chromeDriver.manage().window().maximize();
-        chromeDriver.get(BASE_URL);
-
+    public static WebDriver getDriver() {
+        return driver;
     }
 
     @AfterMethod
-    public void cleaningCookies() {
-        getChromeDriver().manage().deleteAllCookies();
-        getChromeDriver().getLocalStorage().clear();
-    }
-
-    @AfterSuite
-    public void close() {
-        chromeDriver.close();
+    public void teardown() {
+        WebDriverHelper.quitBrowser();
     }
 }

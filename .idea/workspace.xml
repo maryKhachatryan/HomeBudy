@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71ab1c7a-7ad5-4823-9fed-d6350b0ef01d" name="Changes" comment="Test for sharing with HomeBuddy" />
+    <list default="true" id="71ab1c7a-7ad5-4823-9fed-d6350b0ef01d" name="Changes" comment="Test for sharing with HomeBuddy">
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/ScreenshotUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/WebDriverHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/listener/Listeners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/business/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/pages/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/business/pages/LandingPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/ActionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/ActionHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/WaitHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/WaitHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/autoTests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/autoTests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/autoTests/landingPage/LandingPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/autoTests/landingPage/LandingPageTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1769959546518</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Test for sharing with HomeBuddy">
+      <created>1769960163907</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1769960163907</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
