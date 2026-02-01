@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71ab1c7a-7ad5-4823-9fed-d6350b0ef01d" name="Changes" comment="For sharing with HomeBuddy" />
+    <list default="true" id="71ab1c7a-7ad5-4823-9fed-d6350b0ef01d" name="Changes" comment="Test for sharing with HomeBuddy" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1769959066133</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Test for sharing with HomeBuddy">
+      <created>1769959546518</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1769959546518</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +120,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="For sharing with HomeBuddy" />
-    <option name="LAST_COMMIT_MESSAGE" value="For sharing with HomeBuddy" />
+    <MESSAGE value="Test for sharing with HomeBuddy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test for sharing with HomeBuddy" />
   </component>
 </project>
